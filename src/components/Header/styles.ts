@@ -104,7 +104,27 @@ export const Icon = styled.button`
   color: #ED3237;
   line-height: 1.7rem;
 
+  position: relative;
+
   > svg {
     font-size: 2.6rem;
+  }
+
+  > div {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: #F09035;
+    padding: .3rem .5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -1rem;
+    left: 2rem;
+    color: #FFF;
+    font-size: 1rem;
   }
 `;

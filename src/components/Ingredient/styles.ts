@@ -23,4 +23,8 @@ export const Container = styled.div`
     font-weight: 400;
     color: #F09035;
   }
+
+  @media(min-width: 980px) {
+    margin-top: 2.4rem;
+  }
 `;

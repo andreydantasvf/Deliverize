@@ -29,6 +29,7 @@ export function Header() {
         <Icon>
           <AiOutlineShoppingCart />
           Carrinho
+          <div>1</div>
         </Icon>
       </Nav>
     </Container>

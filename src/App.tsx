@@ -3,7 +3,7 @@ import { IncrementButton } from "./components/IncrementButton"
 import { Ingredient } from "./components/Ingredient"
 import { Label } from "./components/Label"
 
-import { Container, ImageSnack, Prices, Ingredients, Option, Buttons } from "./styles"
+import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons } from "./styles"
 
 function App() {
 
@@ -12,19 +12,21 @@ function App() {
       <Header />
 
       <Container>
-        <ImageSnack>
-          <img src="/Lanche.png" alt="Picanha cheddar bacon" />
-        </ImageSnack>
+        <Content>
+          <ImageSnack>
+            <img src="/Lanche.png" alt="Picanha cheddar bacon" />
+          </ImageSnack>
 
-        <h1>Oferta picanha cheddar bacon</h1>
-        <span>Delicioso hambúrguer de picanha, molho de picanha, cebola crispy, bacon, queijo cheddar, molho cheddar e pão mix de gergelim, acompanhamento e bebida.</span>
+          <h1>Oferta picanha cheddar bacon</h1>
+          <span>Hambúrguer de picanha, molho de picanha, cebola crispy, bacon, queijo cheddar, molho cheddar e pão mix de gergelim</span>
 
-        <Prices>
-          <span>R$31,99</span>
-          <span>R$34,95</span>
-        </Prices>
+          <Prices>
+            <span>R$31,99</span>
+            <span>R$34,95</span>
+          </Prices>
+        </Content>
 
-        <form>
+        <Form>
           <Label
             title="Adicionar Ingredientes"
             subtitle="Até 8 ingredientes."
@@ -66,8 +68,8 @@ function App() {
             <IncrementButton />
             <button>Adicionar</button>
           </Buttons>
-        </form>
-      </Container>
+        </Form>
+      </Container >
     </>
   )
 }
