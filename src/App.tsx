@@ -8,8 +8,9 @@ import Lanche from "./assets/Lanche.png";
 import { api } from "./services/api"
 import { ProductType } from "./types/product"
 
-import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons, PopOver } from "./styles/app.styles"
+import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons } from "./styles/app.styles"
 import { Loading } from "./components/Loading"
+import { PopOver } from "./components/PopOver"
 
 function App() {
   const [data, setData] = useState<ProductType>([]);
@@ -89,24 +90,12 @@ function App() {
                 <button type="button" onClick={showPopOver}>Adicionar</button>
               </Buttons>
             </Form>
+            
+            <PopOver className={popOverShow ? "active" : ""} />
           </Container >
           :
           <Loading />
       }
-
-      <PopOver className={popOverShow ? "active" : ""}>
-        <div className="title-popOver">Adicionado com Sucesso</div>
-        <div className="content-popOver">
-          <span>Oferta Cheddar Bacon</span>
-          <ul>
-            Ingredientes:
-            <li>1 Carne 250gr</li>
-            <li>2 Queijo Cheddar</li>
-            <li>1 Bacon</li>
-            <li>Molho especial</li>
-          </ul>
-        </div>
-      </PopOver>
     </>
   )
 }

@@ -1,21 +1,10 @@
-import { useLayoutEffect, useState } from "react";
 import { Container } from "./styles";
 
-interface PopOverProps {
-  show: boolean;
-}
-
-export function PopOver({ show = false }: PopOverProps) {
-  const [popOverShow, setPopOverShow] = useState(false);
-
-  useLayoutEffect(() => {
-    setPopOverShow(true);
-
-    setTimeout(() => setPopOverShow(false), 3000);
-  }, [show]);
-
+export function PopOver({...rest}) {
   return (
-    <Container className={popOverShow ? "active" : ""}>
+    <Container
+      {...rest}
+    >
       <div className="title-popOver">Adicionado com Sucesso</div>
       <div className="content-popOver">
         <span>Oferta Cheddar Bacon</span>
