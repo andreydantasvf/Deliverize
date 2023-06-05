@@ -87,15 +87,16 @@ export const Prices = styled.div`
 
 export const Form = styled.form`
   margin-top: 3.2rem;
-
+  
   @media(min-width: 980px) {
     width: 100%;
     max-width: 43.9rem;
-    padding: 3.2rem;
     border: 1px solid #686868;
     border-radius: .8rem;
+    padding: 3.2rem;
   }
 `;
+
 
 export const Ingredients = styled.div`
   > div + div {
@@ -181,6 +182,8 @@ export const PopOver = styled.div`
   right: 1rem;
   transition: opacity .5s linear;
 
+  font-family: 'Roboto Condensed', sans-serif;
+
   > .title-popOver {
     background: #F09035;
     padding: .9rem;
@@ -228,6 +231,10 @@ export const PopOver = styled.div`
   }
 
   &.active {
-    opacity: 1;
+    opacity: 0;
+
+    @media(min-width: 980px) {
+      opacity: 1;
+    }
   }
 `;

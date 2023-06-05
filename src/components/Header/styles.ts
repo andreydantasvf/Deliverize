@@ -100,15 +100,11 @@ export const Icon = styled.button`
 
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   color: #ED3237;
   line-height: 1.7rem;
 
   position: relative;
-
-  > svg {
-    font-size: 2.6rem;
-  }
 
   > div {
     width: 1.6rem;
@@ -122,8 +118,8 @@ export const Icon = styled.button`
     justify-content: center;
 
     position: absolute;
-    top: -1rem;
-    left: 2rem;
+    top: -.8rem;
+    left: 2.4rem;
     color: #FFF;
     font-size: 1rem;
   }
