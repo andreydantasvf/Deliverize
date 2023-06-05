@@ -11,7 +11,7 @@
 	Teste para a vaga de FrontEnd da TeamSoft.
 </p>
 
-[Clique aqui para ver a aplicação na Web](http)
+[Clique aqui para ver a aplicação na Web](https://deliverize.netlify.app/)
 
 
 ## 🚀 Tecnologias
