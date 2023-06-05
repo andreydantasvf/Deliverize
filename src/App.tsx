@@ -1,11 +1,19 @@
+import { useState } from "react"
 import { Header } from "./components/Header"
 import { IncrementButton } from "./components/IncrementButton"
 import { Ingredient } from "./components/Ingredient"
 import { Label } from "./components/Label"
 
-import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons } from "./styles"
+import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons, PopOver } from "./styles"
 
 function App() {
+  const [popOverShow, setPopOverShow] = useState(false);
+
+  function showPopOver() {
+    setPopOverShow(true);
+
+    setTimeout(() => setPopOverShow(false), 3000);
+  }
 
   return (
     <>
@@ -66,10 +74,24 @@ function App() {
 
           <Buttons>
             <IncrementButton />
-            <button>Adicionar</button>
+            <button type="button" onClick={showPopOver}>Adicionar</button>
           </Buttons>
         </Form>
       </Container >
+
+      <PopOver className={popOverShow ? "active" : ""}>
+        <div className="title-popOver">Adicionado com Sucesso</div>
+        <div className="content-popOver">
+          <span>Oferta Cheddar Bacon</span>
+          <ul>
+            Ingredientes:
+            <li>1 Carne 250gr</li>
+            <li>2 Queijo Cheddar</li>
+            <li>1 Bacon</li>
+            <li>Molho especial</li>
+          </ul>
+        </div>
+      </PopOver>
     </>
   )
 }
