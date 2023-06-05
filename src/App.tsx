@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Header } from "./components/Header"
 import { IncrementButton } from "./components/IncrementButton"
 import { Ingredient } from "./components/Ingredient"
@@ -73,7 +73,10 @@ function App() {
           </Option>
 
           <Buttons>
-            <IncrementButton />
+            <IncrementButton
+              initialQuantity={1}
+              isIngredient={false}
+            />
             <button type="button" onClick={showPopOver}>Adicionar</button>
           </Buttons>
         </Form>

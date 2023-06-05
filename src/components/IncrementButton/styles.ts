@@ -15,5 +15,11 @@ export const Container = styled.div`
 
   > svg {
     color: #D80000;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: not-allowed;
+      color: #AEB6C1;
+    }
   }
 `;
