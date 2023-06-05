@@ -8,7 +8,7 @@ import Lanche from "./assets/Lanche.png";
 import { api } from "./services/api"
 import { ProductType } from "./types/product"
 
-import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons, PopOver } from "./styles"
+import { Container, Content, ImageSnack, Prices, Form, Ingredients, Option, Buttons, PopOver } from "./styles/app.styles"
 import { Loading } from "./components/Loading"
 
 function App() {
