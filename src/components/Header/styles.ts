@@ -30,6 +30,7 @@ export const Logo = styled.div`
 
   > img {
     width: 22rem;
+    height: 4.3rem;
   }
 
   @media(min-width: 980px) {
@@ -43,7 +44,7 @@ export const Nav = styled.div`
 
   > input {
     width: 100%;
-    padding: 2rem 1.6rem;
+    padding: 1.6rem;
 
     border: 1px solid #ED3237;
     border-radius: .4rem;
@@ -81,6 +82,8 @@ export const Address = styled.button`
   line-height: 1.2rem;
   font-weight: 700;
 
+  position: relative;
+
   > span {
     color: #D80000;
     font-weight: 400;
@@ -90,7 +93,10 @@ export const Address = styled.button`
   > svg {
     font-size: 1.2rem;
     color: #D80000;
-    align-self: flex-end;
+    
+    position: absolute;
+    right: 2rem;
+    top: 50%;
   }
 `;
 

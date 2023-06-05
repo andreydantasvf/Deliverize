@@ -36,14 +36,14 @@ export const Content = styled.div`
     > h1 {
       font-size: 2.8rem;
       line-height: 100%;
-      padding: 2rem 0;
+      padding: 1rem 0;
     }
 
     > span {
       font-size: 2rem;
       line-height: 120%;
-      margin-top: 2rem;
-      padding-bottom: 2rem;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
     }
   }
 `;
@@ -166,7 +166,7 @@ export const Buttons = styled.div`
   }
 
   @media(min-width: 980px) {
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
   }
 `;
 
