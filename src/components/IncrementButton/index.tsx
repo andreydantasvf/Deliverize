@@ -9,9 +9,10 @@ import { Container } from "./styles";
 interface IncrementButtonProps {
   initialQuantity?: number;
   isIngredient?: boolean;
+  maxIngredients?: number;
 }
 
-export function IncrementButton({ initialQuantity = 0, isIngredient = true }: IncrementButtonProps) {
+export function IncrementButton({ initialQuantity = 0, isIngredient = true, maxIngredients = 10 }: IncrementButtonProps) {
   const [count, setCount] = useState<number>(initialQuantity);
 
   const { quantity } = useAppSelector(state => state.quantityIngredients);
@@ -19,7 +20,7 @@ export function IncrementButton({ initialQuantity = 0, isIngredient = true }: In
 
   function handleIncrement() {
     if (isIngredient) {
-      if (quantity < 8) {
+      if (quantity < maxIngredients) {
         setCount(count + 1);
         dispatch(incrementQuantity())
       }
@@ -42,7 +43,7 @@ export function IncrementButton({ initialQuantity = 0, isIngredient = true }: In
     <Container>
       <AiOutlineMinus className={count === 0 ? "disabled" : ""} onClick={handleDecrement} />
       {count}
-      <AiOutlinePlus className={quantity === 8 && isIngredient ? "disabled" : ""} onClick={handleIncrement} />
+      <AiOutlinePlus className={quantity === maxIngredients && isIngredient ? "disabled" : ""} onClick={handleIncrement} />
     </Container>
   )
 }

@@ -64,6 +64,7 @@ function App() {
                     key={String(ingredient.id)}
                     title={ingredient.nm_item}
                     price={ingredient.vl_item}
+                    maxIngredients={data[0].ingredients[0].max_itens}
                   />
                 ))}
 
@@ -90,7 +91,7 @@ function App() {
                 <button type="button" onClick={showPopOver}>Adicionar</button>
               </Buttons>
             </Form>
-            
+
             <PopOver className={popOverShow ? "active" : ""} />
           </Container >
           :
