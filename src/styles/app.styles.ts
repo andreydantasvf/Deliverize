@@ -3,15 +3,7 @@ import styled from "styled-components";
 export const Container = styled.main`
   width: 100%;
   padding: 1.6rem;
-
-  > .active {
-    opacity: 0;
-
-    @media(min-width: 980px) {
-      opacity: 1;
-    }
-  }
-
+  
   @media(min-width: 980px) {
     padding: 0 6.6rem;
 

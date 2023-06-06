@@ -59,6 +59,10 @@ export const Container = styled.div`
   }
 
   &.active {
-    opacity: 1;
+    opacity: 0;
+
+    @media(min-width: 980px) {
+      opacity: 1;
+    }
   }
 `;
